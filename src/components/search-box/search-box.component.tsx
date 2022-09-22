@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./search-box.component.css";
+import "./search-box.styles.scss";
 
 /** search box component props */
 type Props = {
