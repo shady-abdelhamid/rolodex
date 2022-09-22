@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Monster } from "../../models/monster.type";
-import "./card-list.component.css";
+import "./card-list.styles.css";
 
 /** Card list component props */
 type Props = {
@@ -12,11 +12,18 @@ class CardList extends Component<Props> {
     const { monsters } = this.props;
 
     return (
-      <ul>
+      <div className="card-list">
         {monsters.map((monster: Monster) => (
-          <li key={monster.id}>{monster.name}</li>
+          <div key={monster.id} className="card-container">
+            <img
+              src={`https://robohash.org/${monster.id}?set=set4&size=180x180`}
+              alt={monster.name}
+            />
+            <h1>{monster.name}</h1>
+            <p>{monster.email}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     );
   }
 }
