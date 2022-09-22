@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Monster } from "../../models/monster.type";
+import "./card-list.component.css";
 
 /** Card list component props */
 type Props = {
